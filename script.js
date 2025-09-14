@@ -12,6 +12,18 @@ function showRSVP() {
     rsvpModal.show();
 }
 
+// Save the Date to Calendar
+function saveToCalendar() {
+    const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Wedding Invite//EN\nBEGIN:VEVENT\nUID:wedding2025@marellapudi.com\nDTSTAMP:20250914T120000Z\nDTSTART:20251002T184300Z\nDTEND:20251002T200000Z\nSUMMARY=Wedding: Himamsu & Prasanna\nDESCRIPTION=Wedding of Himamsu & Prasanna. Venue: Grand Krishna A/c Function Hall, Mini Bypass Road, Eluru.\nLOCATION=Grand Krishna A/c Function Hall, Mini Bypass Road, Eluru\nEND:VEVENT\nEND:VCALENDAR`;
+    const blob = new Blob([icsContent.replace(/\\n/g, "\r\n")], { type: 'text/calendar' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'wedding-invite.ics';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 // Handle RSVP form submission
 document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     e.preventDefault();

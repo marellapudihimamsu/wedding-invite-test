@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wedding Invite//EN
+BEGIN:VEVENT
+UID:wedding2025@marellapudi.com
+DTSTAMP:20250914T120000Z
+DTSTART:20251002T184300Z
+DTEND:20251002T200000Z
+SUMMARY=Wedding: Himamsu & Prasanna
+DESCRIPTION=Wedding of Himamsu & Prasanna. Venue: Grand Krishna A/c Function Hall, Mini Bypass Road, Eluru.
+LOCATION=Grand Krishna A/c Function Hall, Mini Bypass Road, Eluru
+END:VEVENT
+END:VCALENDAR
